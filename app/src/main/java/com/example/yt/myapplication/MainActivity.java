@@ -1,6 +1,7 @@
 package com.example.yt.myapplication;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -44,6 +45,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);
         ivupdate=(ImageView)findViewById(R.id.title_main_update);
         ivupdate.setOnClickListener(this);
+        ivmanager=(ImageView)findViewById(R.id.title_main_manager);
+        ivmanager.setOnClickListener(this);
         initView();
         if (CheckNet.getNetState(this) == CheckNet.NET_NONE) {
             Log.d("天气预报", "网络不通");
@@ -200,6 +203,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         if(v.getId()==R.id.title_main_update){
             getWeatherDatafromNet("101010100");
+        }
+        if(v.getId()==R.id.title_main_manager){
+            Intent intent=new Intent(this,select_city.class);
+            startActivity(intent);
         }
     }
 }
