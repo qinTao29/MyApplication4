@@ -204,9 +204,5 @@ public class MainActivity extends Activity implements View.OnClickListener{
         if(v.getId()==R.id.title_main_update){
             getWeatherDatafromNet("101010100");
         }
-        if(v.getId()==R.id.title_main_manager){
-            Intent intent=new Intent(this,select_city.class);
-            startActivity(intent);
-        }
     }
 }
