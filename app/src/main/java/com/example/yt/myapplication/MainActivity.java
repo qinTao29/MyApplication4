@@ -133,11 +133,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
             {
                 switch (eventType)
                 {
-                    //文档开始位置
                     case XmlPullParser.START_DOCUMENT:
                         Log.d("parse","start doc");
                         break;
-                    //标签元素开始位置
                     case XmlPullParser.START_TAG:
                         if(xmlPullParser.getName().equals("resp"))
                         {
@@ -203,6 +201,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         if(v.getId()==R.id.title_main_update){
             getWeatherDatafromNet("101010100");
+        }  if(v.getId()==R.id.title_main_manager){
+            Intent intent=new Intent(this,Select_city.class);
+            startActivity(intent);
         }
     }
 }
