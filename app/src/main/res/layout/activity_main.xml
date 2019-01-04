@@ -11,10 +11,8 @@
         android:id="@+id/title_main_manager"
         android:layout_width="0dp"
         android:layout_height="62dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginStart="1dp"
-        android:background="@drawable/manager"
-        app:layout_constraintEnd_toStartOf="@+id/title_main_title"
+        android:background="@android:drawable/ic_menu_search"
+        app:layout_constraintEnd_toStartOf="@+id/title_main_update"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,26 +20,26 @@
         android:id="@+id/title_main_locate"
         android:layout_width="0dp"
         android:layout_height="62dp"
-        android:background="@drawable/update"
+        android:background="@android:drawable/arrow_down_float"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/title_main_title"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_main_title"
-        android:layout_width="0dp"
+        android:layout_width="122dp"
         android:layout_height="62dp"
         android:text="天气预报"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/title_main_locate"
-        app:layout_constraintStart_toEndOf="@+id/title_main_manager"
+        app:layout_constraintStart_toEndOf="@+id/title_main_update"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/title_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="56dp"
         android:text="北京"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,17 +69,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_main_temperature" />
 
     <TextView
-        android:id="@+id/tv_main_wind"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="微风"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_main_weatherState" />
-
-    <TextView
         android:id="@+id/tv_main_updatetime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,4 +78,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main_wind" />
+
+    <TextView
+        android:id="@+id/tv_main_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="微风"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main_weatherState" />
+
+    <ImageView
+        android:id="@+id/title_main_update"
+        android:layout_width="0dp"
+        android:layout_height="62dp"
+        android:src="@android:drawable/stat_notify_sync"
+        app:layout_constraintEnd_toStartOf="@+id/title_main_title"
+        app:layout_constraintStart_toEndOf="@+id/title_main_manager"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
