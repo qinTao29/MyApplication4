@@ -9,20 +9,30 @@ public class TodayWeather {
     private String low;
     private String type;
 
-    private String data1;
+    private String date1;
     private String low1;
     private String high1;
     private String type1;
     private String fengli1;
 
-    private String data2;
+    private String date2;
+    private String low2;
+    private String high2;
+    private String type2;
+    private String fengli2;
 
-    public String getData1() {
-        return data1;
+    private String date3;
+    private String low3;
+    private String high3;
+    private String type3;
+    private String fengli3;
+
+    public String getDate1() {
+        return date1;
     }
 
-    public void setData1(String data1) {
-        this.data1 = data1;
+    public void setDate1(String date1) {
+        this.date1 = date1;
     }
 
     public String getLow1() {
@@ -57,12 +67,12 @@ public class TodayWeather {
         this.fengli1 = fengli1;
     }
 
-    public String getData2() {
-        return data2;
+    public String getDate2() {
+        return date2;
     }
 
-    public void setData2(String data2) {
-        this.data2 = data2;
+    public void setDate2(String date2) {
+        this.date2 = date2;
     }
 
     public String getLow2() {
@@ -97,12 +107,12 @@ public class TodayWeather {
         this.fengli2 = fengli2;
     }
 
-    public String getData3() {
-        return data3;
+    public String getDate3() {
+        return date3;
     }
 
-    public void setData3(String data3) {
-        this.data3 = data3;
+    public void setDate3(String date3) {
+        this.date3 = date3;
     }
 
     public String getLow3() {
@@ -137,16 +147,6 @@ public class TodayWeather {
         this.fengli3 = fengli3;
     }
 
-    private String low2;
-    private String high2;
-    private String type2;
-    private String fengli2;
-
-    private String data3;
-    private String low3;
-    private String high3;
-    private String type3;
-    private String fengli3;
     public String getCity() {
         return city;
     }
@@ -215,4 +215,5 @@ public class TodayWeather {
                 "type='"+type+'\''+
                 '}';
     }
+
 }

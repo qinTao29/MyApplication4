@@ -104,7 +104,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="今天"
+        android:text="明天"
         app:layout_constraintEnd_toStartOf="@+id/tv_no2_week"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_main_updatetime" />
@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:text="今天"
+        android:text="后天"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_no1_week"
         app:layout_constraintEnd_toStartOf="@+id/tv_no3_week"
         app:layout_constraintStart_toEndOf="@+id/tv_no1_week" />
@@ -126,7 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginLeft="5dp"
-        android:text="今天"
+        android:text="大后天"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_no2_week"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/tv_no2_week" />
