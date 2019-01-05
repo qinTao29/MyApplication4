@@ -12,11 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.StringReader;
@@ -26,6 +24,8 @@ import java.net.URL;
 public class MainActivity extends Activity implements View.OnClickListener{
     private   TextView tvname, tvtemperature, tvweatherState, tvupdatetime, tvwind;
     private  ImageView ivmanager, ivlocate, ivupdate;
+    private TextView week1T,week2T,week3T,temperature1T,temperature2T,temperature3T,
+            wind1T,wind2T,wind3T,climate1T,climate2T,climate3T;
     private Handler mHandler =new Handler(){
         public void handleMessage(android.os.Message message){
             switch (message.what){
@@ -67,6 +67,21 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         ivmanager = (ImageView) findViewById(R.id.title_main_manager);
         ivlocate = (ImageView) findViewById(R.id.title_main_locate);
+
+        week1T=findViewById(R.id.tv_no1_week);
+        temperature1T=findViewById(R.id.tv_no1_temperature);
+        climate1T=findViewById(R.id.tv_no1_weatherState);
+        wind1T=findViewById(R.id.tv_no1_wind);
+
+        week2T=findViewById(R.id.tv_no2_week);
+        temperature2T=findViewById(R.id.tv_no2_temperature);
+        climate2T=findViewById(R.id.tv_no2_weatherState);
+        wind2T=findViewById(R.id.tv_no2_wind);
+
+        week3T=findViewById(R.id.tv_no3_week);
+        temperature3T=findViewById(R.id.tv_no3_temperature);
+        climate3T=findViewById(R.id.tv_no3_weatherState);
+        wind3T=findViewById(R.id.tv_no3_wind);
 
         tvname.setText("N/A");
         tvtemperature.setText("N/A");
@@ -173,6 +188,28 @@ public class MainActivity extends Activity implements View.OnClickListener{
                                 eventType = xmlPullParser.next();
                                 Log.d("type", xmlPullParser.getText());
                                 todayWeather.setType(xmlPullParser.getText());
+                                typeCount++;
+                            }
+                            else if (xmlPullParser.getName().equals("data1")){
+                                eventType = xmlPullParser.next();
+                                Log.d("data1", xmlPullParser.getText());
+                                todayWeather.setUpdatetime(xmlPullParser.getText());
+                            }
+                            else if (xmlPullParser.getName().equals("low1") && lowCount == 1){
+                                eventType = xmlPullParser.next();
+                                todayWeather.setLow1(xmlPullParser.getText());
+                                Log.d("low1",xmlPullParser.getText());
+                                lowCount++;
+                            }
+                            else if (xmlPullParser.getName().equals("high1") && highCount == 1){
+                                eventType = xmlPullParser.next();
+                                todayWeather.setHigh1(xmlPullParser.getText());
+                                Log.d("high1",xmlPullParser.getText());
+                                highCount++;
+                            }else if (xmlPullParser.getName().equals("type1") && typeCount == 1){
+                                eventType = xmlPullParser.next();
+                                todayWeather.setType1(xmlPullParser.getText());
+                                Log.d("type1",xmlPullParser.getText());
                                 typeCount++;
                             }
                         }
