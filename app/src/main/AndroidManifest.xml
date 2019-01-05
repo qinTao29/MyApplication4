@@ -35,7 +35,8 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="vPIwk3LRD9UqhLWW7HrRddrEy9BossYA"></meta-data>
+            android:value="vPIwk3LRD9UqhLWW7HrRddrEy9BossYA" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,8 +44,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Select_city" />
-        <activity android:name=".Locate"></activity>
+        <activity android:name=".Locate" />
+        <activity android:name=".SelectCity"></activity>
     </application>
 
 </manifest>

@@ -49,6 +49,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         ivupdate.setOnClickListener(this);
         ivmanager=(ImageView)findViewById(R.id.title_main_manager);
         ivmanager.setOnClickListener(this);
+        ivlocate=findViewById(R.id.title_main_locate);
+        ivlocate.setOnClickListener(this);
         initView();
         if (CheckNet.getNetState(this) == CheckNet.NET_NONE) {
             Log.d("天气预报", "网络不通");
@@ -323,7 +325,14 @@ public class MainActivity extends Activity implements View.OnClickListener{
         if(v.getId()==R.id.title_main_update){
             getWeatherDatafromNet("101010100");
         }  if(v.getId()==R.id.title_main_manager){
-            Intent intent=new Intent(this,Select_city.class);
+            Intent intent=new Intent(this,SelectCity.class);
+            startActivity(intent);
+        }
+        if (v.getId() == R.id.title_main_locate){
+            Locate mLocation = new Locate();
+            mLocation.startLocation();
+            Log.d("click","title_main_locate");
+            Intent intent=new Intent(this,Locate.class);
             startActivity(intent);
         }
     }

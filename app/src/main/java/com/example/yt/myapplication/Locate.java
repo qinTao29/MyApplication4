@@ -42,6 +42,10 @@ public class Locate extends Activity {
         mLocationClient.setLocOption(option);
     }
 
+    public void startLocation() {
+    }
+
+
     class MyLocationListener implements BDLocationListener{
         Button locBtn;
         MyLocationListener(Button locBtn){
