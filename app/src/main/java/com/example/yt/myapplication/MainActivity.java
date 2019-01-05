@@ -43,7 +43,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_locate);
         setContentView(R.layout.activity_main);
         ivupdate=(ImageView)findViewById(R.id.title_main_update);
         ivupdate.setOnClickListener(this);
