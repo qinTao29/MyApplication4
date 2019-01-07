@@ -25,7 +25,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private   TextView tvname, tvtemperature, tvweatherState, tvupdatetime, tvwind;
     private  ImageView ivmanager, ivlocate, ivupdate;
     private TextView week1T,week2T,week3T,temperature1T,temperature2T,temperature3T,
-            wind1T,wind2T,wind3T,climate1T,climate2T,climate3T;
+            wind1T,wind2T,wind3T,climate1T,climate2T,climate3T,tvbanben;
     private Handler mHandler =new Handler(){
         public void handleMessage(android.os.Message message){
             switch (message.what){
@@ -68,6 +68,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         tvupdatetime = (TextView) findViewById(R.id.tv_main_updatetime);
         tvweatherState = (TextView) findViewById(R.id.tv_main_weatherState);
         tvwind = (TextView) findViewById(R.id.tv_main_wind);
+        tvbanben=(TextView)findViewById(R.id.tv_main_banben);
 
         ivmanager = (ImageView) findViewById(R.id.title_main_manager);
         ivlocate = (ImageView) findViewById(R.id.title_main_locate);
@@ -334,6 +335,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
             Log.d("click","title_main_locate");
             Intent intent=new Intent(this,Locate.class);
             startActivity(intent);
+        }
+        if(v.getId()==R.id.tv_main_banben){
+           Intent intent=new Intent(this,Banben.class);
+           startActivity(intent);
         }
     }
 }

@@ -45,7 +45,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Locate" />
-        <activity android:name=".SelectCity"></activity>
+        <activity android:name=".SelectCity" />
+        <activity android:name=".Banben"></activity>
     </application>
 
 </manifest>
